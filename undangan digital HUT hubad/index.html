@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan HUT Corps Komunikasi dan Elektronika Angkatan Darat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Audio Element untuk Musik Background -->
+    <audio id="backgroundMusic" loop>
+        <source src="mars.mp3" type="audio/mp3">
+        Browser Anda tidak mendukung audio.
+    </audio>
+
+    <!-- Music Control -->
+    <div class="music-control" id="musicControl">
+        <div class="music-icon">🔊</div>
+    </div>
+
+    <!-- Video Intro Screen -->
+    <div class="video-intro" id="videoIntro">
+        <div class="video-container">
+            <video playsinline class="intro-video" id="introVideo">
+                <source src="opening.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video.
+            </video>
+            <div class="video-overlay">
+                <div class="loading-text">
+                    <div class="military-star"></div>
+                    <h3>UNDANGAN HARI ULANG TAHUN</h3>
+                    <h3>CORPS KOMUNIKASI DAN ELEKTRONIKA  ANGKATAN DARAT</h3>
+                    <p>Ketuk tombol untuk membuka undangan</p>
+                    <div class="play-button-container">
+                        <button class="play-intro-btn" id="playIntroBtn">
+                            <span class="play-icon">▶</span>
+                            Klik Disini
+                        </button>
+                    </div>
+                    <div class="progress-bar" style="display: none;">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="skip-btn" id="skipBtn">Lewati Video ▶</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent" style="display: none;">
+        <div class="background-animation">
+            <div class="radar"></div>
+            <div class="signal signal-1"></div>
+            <div class="signal signal-2"></div>
+            <div class="signal signal-3"></div>
+        </div>
+
+        <div class="undangan-container">
+            <div class="header">
+                <div class="logo-container">
+                    <div class="logo">
+                        <img src="poltekad.png" alt="Logo Politeknik Angkatan Darat" onerror="this.style.display='none'">
+                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <div class="logo">
+                        <img src="komlekad.png" alt="Logo Corps Komunikasi dan Elektronika Angkatan Darat" onerror="this.style.display='none'">
+                    </div>
+                </div>
+                
+                <h1>KOMUNIKASI DAN ELEKTRONIKA ANGKATAN DARAT</h1>
+                <div class="semboyan">"CIGHRA APTA NIRBAYA"</div>
+            </div>
+            
+            <div class="content">
+                <div class="countdown">
+                    <div class="countdown-title">Menuju Acara</div>
+                    <div class="countdown-timer" id="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="days">00</span>
+                            <span class="countdown-label">Hari</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="hours">00</span>
+                            <span class="countdown-label">Jam</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="minutes">00</span>
+                            <span class="countdown-label">Menit</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="seconds">00</span>
+                            <span class="countdown-label">Detik</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="undangan-header">
+                    <h2>UNDANGAN KHUSUS</h2>
+                    <p>Kepada Yth:<br>
+                    <strong>Segenap Warga Corps Komunikasi dan Elektronika Angkatan Darat<br>Politeknik Angkatan Darat</strong></p>
+                </div>
+                
+                <div class="info-acara">
+                    <h3>INFORMASI ACARA</h3>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">🎯</div>
+                        <div class="info-content">
+                            <strong>Acara:</strong>
+                            <span>Syukuran & Silaturahmi HUT Corps Komunikasi dan Elektronika Angkatan Darat</span>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📅</div>
+                        <div class="info-content">
+                            <strong>Hari/Tanggal:</strong>
+                            <span>Rabu, 26 November 2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">⏰</div>
+                        <div class="info-content">
+                            <strong>Waktu:</strong>
+                            <span>Pukul 17.00 WIB s.d. Selesai</span>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <strong>Tempat:</strong>
+                            <span>Warung Lesmana by marisukakoi group<br>
+                            <small>Ds. Leses, Kec. Karangploso</small></span>
+                        </div>
+                    </div>
+
+                    <!-- Peta Interaktif -->
+                    <div class="maps-embed-container">
+                        <div class="maps-header">
+                            <h4>🗺️ Lokasi Acara</h4>
+                            <p>Klik dan seret untuk menjelajahi area sekitar</p>
+                        </div>
+                        <div class="maps-wrapper">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.789316686206!2d112.599569!3d-7.8928716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78815112888b6b%3A0xb9b31ffdc1f221b4!2sWarung%20Lesmana%20by%20marisukakoi%20group!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0; border-radius: 15px;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="interactive-map">
+                            </iframe>
+                            <div class="maps-overlay" id="mapsOverlay">
+                                <div class="overlay-content">
+                                    <span class="tap-icon">👆</span>
+                                    <p>Ketuk untuk memuat peta</p>
+                                    <button class="load-maps-btn" onclick="loadMaps()">Muat Peta</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maps-actions">
+                            <a href="https://www.google.com/maps/place/Warung+Lesmana+by+marisukakoi+group/@-7.8928937,112.6021421,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipMRO9qklUpDCkW04qXMWD12nLgtKjQmqJjpw-zg!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipMRO9qklUpDCkW04qXMWD12nLgtKjQmqJjpw-zg%3Dw153-h86-k-no!7i6000!8i3368!4m7!3m6!1s0x2e78815112888b6b:0xb9b31ffdc1f221b4!8m2!3d-7.8928716!4d112.6021439!10e5!16s%2Fg%2F11slzkd1gn?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D" 
+                               target="_blank" class="maps-button">
+                                <span class="maps-icon">📍</span>
+                                Buka di Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dresscode">
+                    <div class="dresscode-icon">👔</div>
+                    <div class="dresscode-content">
+                        <h4>DRESSCODE</h4>
+                        <p>Kemeja Hitam (Formal)</p>
+                    </div>
+                </div>
+                
+                <div class="closing-message">
+                    <p>"Merupakan kehormatan bagi kami atas kehadiran Bapak/Ibu/Saudara/i<br> 
+                    untuk memeriahkan acara ini."</p>
+                </div>
+
+                <div class="floating-elements">
+                    <div class="floating-element element-1">⚡</div>
+                    <div class="floating-element element-2">📡</div>
+                    <div class="floating-element element-3">🔊</div>
+                    <div class="floating-element element-4">🛡️</div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <div class="footer-content">
+                    <p><strong>Keluarga Besar Corps Komunikasi dan Elektronika Angkatan Darat</strong><br>
+                    Politeknik Angkatan Darat</p>
+                    <div class="footer-semboyan">Cighra Apta Nirbaya</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
